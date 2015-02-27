@@ -1,4 +1,4 @@
-load("BSTtree.js");
+load("CraigBSTtree.js");
 load("traverse.js");
 
 var nums = new BST();
