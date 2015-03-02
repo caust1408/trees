@@ -21,3 +21,14 @@ function postOrder(node) {
    write(node.show() + " ");
  }
 }
+// this is where I find out how many nodes are in the tree
+var count = 0;	
+function numOfNodes(node) {
+	if (node !== null) {
+	  numOfNodes(node.left);
+	  numOfNodes(node.right);
+	  count++;
+	  print('There are ' + count + ' nodes');
+	}
+}
+
