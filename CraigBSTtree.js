@@ -21,6 +21,7 @@ function BST() {
   this.remove = remove;
   this.removeNode = removeNode;
   this.getSmallest = getSmallest;
+  this.numOfNodes = numOfNodes;
 }
 
 function insert(data) {
@@ -68,12 +69,13 @@ function getmax() {
   }
   return current.data;
 }
-
 function find(data) {
   var current = this.root;
-  while (current.data != data) {
+  
+  while (current && current.data != data) {
      if (data < current.data) {
         current = current.left;
+	
      }
      else {
         current = current.right;
